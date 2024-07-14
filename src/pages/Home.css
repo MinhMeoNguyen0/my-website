@@ -1,0 +1,90 @@
+/* src/pages/Home.css */
+.title-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap; /* Allow wrapping */
+}
+
+.name-container {
+  order: 1;
+  text-align: left;
+  white-space: nowrap; /* Prevent wrapping */
+  width: 100%; /* Use fixed width to prevent pushing */
+  margin: 0 0 0 20px; /* Center the text */
+  display: flex;
+  justify-content: flex-start;
+  line-height: 1.9;
+
+}
+
+.greeting {
+  display: inline-block;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.photo-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 100%; /* This makes the box square */
+  position: relative;
+}
+
+.photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.paragraph-container {
+  max-width: 180%;
+}
+
+@media (min-width: 768px) {
+  .content-container {
+    max-width: 100%;
+  }
+  .paragraph-container {
+    max-width: 70%;
+  }
+  
+}
+
+@media (max-width: 600px) {
+  .title-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .greeting-container,
+  .name-container {
+    text-align: left;
+    white-space: normal; /* Allow wrapping on small screens */
+  }
+
+  .content-container {
+    max-width: 100%;
+  }
+}
