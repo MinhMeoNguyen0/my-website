@@ -1,29 +1,56 @@
-// src/components/Header.js
-import React from 'react';
-import { AppBar, Toolbar, IconButton, Typography, Button } from '@mui/material';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { ToggleButton, ToggleButtonGroup, AppBar, Toolbar, IconButton } from '@mui/material';
+import { Link, useLocation } from 'react-router-dom';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
-import Brightness7Icon from '@mui/icons-material/Brightness7';
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import { useTheme } from '@mui/material/styles';
+import './Header.css'; // Import the CSS file for custom styles
 
 const Header = ({ toggleDarkMode, darkMode }) => {
+  const location = useLocation();
+  const [currentPage, setCurrentPage] = useState('');
+
+  useEffect(() => {
+    // Set the current page based on the location path
+    const path = location.pathname === '/' ? '' : location.pathname.substring(1);
+    setCurrentPage(path);
+  }, [location]);
+
+  const handlePageChange = (event, newPage) => {
+    if (newPage !== null) {
+      setCurrentPage(newPage);
+    }
+  };
+
   const theme = useTheme();
   return (
     <AppBar position="static" style={{ background: theme.palette.background.default, boxShadow: 'none' }}>
-      <Toolbar style={{ justifyContent: 'space-between' }}>
+      <Toolbar style={{ justifyContent: 'space-between', margin: 0 }}>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <img src="/path/to/new-logo.png" alt="Logo" style={{ width: 40, height: 40, marginRight: 16 }} />
+          <IconButton style={{ marginLeft: 10, color: theme.palette.text.primary }} component={Link} to="/" color="inherit">
+            <RocketLaunchIcon style={{ color: theme.palette.text.primary }} />
+          </IconButton>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <Button color="inherit" component={Link} to="/" style={{ color: theme.palette.text.primary }}>About</Button>
-          <Button color="inherit" component={Link} to="/projects" style={{ color: theme.palette.text.primary }}>Projects</Button>
-        </div>
-        <IconButton onClick={toggleDarkMode} color="inherit">
-          {darkMode ? <Brightness7Icon /> : <Brightness4Icon />}
+        <ToggleButtonGroup
+          color="primary"
+          value={currentPage}
+          exclusive
+          onChange={handlePageChange}
+          aria-label="Platform"
+          className="custom-toggle-button-group" // Add custom class
+        >
+          <ToggleButton component={Link} to="/about" value="about" className="custom-toggle-button">About Me</ToggleButton>
+          <ToggleButton component={Link} to="/" value="" className="custom-toggle-button">Home</ToggleButton>
+          <ToggleButton component={Link} to="/projects" value="projects" className="custom-toggle-button">Projects</ToggleButton>
+        </ToggleButtonGroup>
+        <IconButton onClick={toggleDarkMode} style={{ marginRight: 10, color: theme.palette.text.primary }}>
+          {darkMode ? <WbSunnyIcon /> : <Brightness4Icon />}
         </IconButton>
       </Toolbar>
     </AppBar>
   );
 };
+
 
 export default Header;
