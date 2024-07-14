@@ -4,26 +4,33 @@
     background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
     padding: 5px; /* Add some padding around the buttons */
     border-radius: 100px !important; /* Rounded corners for individual buttons */
-
   }
-  
+
+.custom-toggle-button {
+  border: none !important; /* Remove default border */
+  border-radius: 100px !important; /* Rounded corners for individual buttons */
+  padding: 8px 20px !important; /* Consistent padding */
+  margin: 0 4px !important; /* Space between buttons */
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out; /* Smooth transitions */
+}
+
+.custom-toggle-button.Mui-selected {
+  background-color: #00bfff00 !important; /* Change background color when selected */
+  color: #00BFFF !important; /* Change text color when selected */
+}
+
+.custom-toggle-button:hover {
+  background-color: #00bfff00 !important; /* Change background color on hover */
+  color: #00BFFF !important; /* Change text color on hover */
+}
+
+@media (max-width: 600px) {
+  .custom-toggle-button-group {
+    padding: 2px; /* Smaller padding for smaller screens */
+  }
+
   .custom-toggle-button {
-    border: none !important; /* Remove default border */
-    border-radius: 100px !important; /* Rounded corners for individual buttons */
-    padding: 8px 20px !important; /* Consistent padding */
-    margin: 0 4px !important; /* Space between buttons */
-    
-    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out; /* Smooth transitions */
+    padding: 4px 10px !important; /* Smaller padding for buttons */
+    font-size: 0.75rem !important; /* Smaller font size for buttons */
   }
-  
-  .custom-toggle-button.Mui-selected {
-    background-color: #00bfff00 !important; /* Change background color when selected */
-    color: #00BFFF !important; /* Change text color when selected */
-  }
-  
-  .custom-toggle-button:hover {
-
-    background-color: #00bfff00 !important; /* Change background color on hover */
-    color: #00BFFF !important; /* Change text color on hover */
-  }
-  
+}
