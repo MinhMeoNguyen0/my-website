@@ -4,7 +4,6 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-
 import './Home.css'; // Import the CSS file for animations and styles
 
 const Photo3 = "https://scontent-sea1-1.xx.fbcdn.net/v/t1.15752-9/449769253_825646466197319_2572762229084854814_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_ohc=EPbtZbRCDhAQ7kNvgFq7LMd&_nc_ht=scontent-sea1-1.xx&oh=03_Q7cD1QFI2SINn0l4jhd6xU-dglR7cfrFRSN0rXCEkh128M5E7g&oe=66BA8103";
@@ -60,40 +59,39 @@ const Home = () => {
         aka Minh Meo
       </Typography>
       <Typography className="paragraph-container" variant="body1" gutterBottom>
-        Welcome to my world of innovation and creativity! I'm thrilled to be a tech enthusiast with over 2 years of full-stack internship experience, where I've had the opportunity to immerse myself in the dynamic world of software development.<br /><br />
-        My passion for technology drives me to continually learn and adapt to new challenges. From designing robust back-end systems to crafting intuitive front-end interfaces, I thrive on creating seamless and efficient applications. My experience has equipped me with a diverse skill set, allowing me to tackle complex problems and deliver innovative solutions.<br /><br />
-        Aside from coding, I have a deep love for food 🍲 and basketball 🏀. Whether it's exploring new cuisines or trying out different recipes, I find joy in the culinary arts. Basketball, on the other hand, keeps me active and disciplined. It's not just a game for me, but a way to build teamwork and resilience.<br /><br />
-        Let's connect and bring your ideas to the forefront of success!
+        Welcome to my world of innovation and creativity! I'm thrilled to be a tech enthusiast with over 2 years of full-stack internship experience, where I've had the opportunity to immerse myself in the dynamic world of software development.  <br /> <br/>
+        My passion for technology drives me to continually learn and adapt to new challenges. From designing robust back-end systems to crafting intuitive front-end interfaces, I thrive on creating seamless and efficient applications. My experience has equipped me with a diverse skill set, allowing me to tackle complex problems and deliver innovative solutions. <br /> <br/>
+        Aside from coding, I have a deep love for food 🍲 and basketball 🏀. Whether it's exploring new cuisines or trying out different recipes, I find joy in the culinary arts. Basketball, on the other hand, keeps me active and disciplined. It's not just a game for me, but a way to build teamwork and resilience. <br /> <br/>
+        In every project I undertake, I bring a blend of technical expertise, creativity, and enthusiasm. I'm always excited to collaborate with like-minded individuals who are passionate about technology and innovation. Let's connect and bring your ideas to the forefront of success!
       </Typography>
-
       <Box sx={{ mt: 2, mb: 2 }}>
-        <IconButton href="https://github.com/MinhMeoNguyen0" target="_blank" color="inherit">
+        <IconButton href="https://github.com/your-github-username" target="_blank" color="inherit">
           <GitHubIcon />
         </IconButton>
-        <IconButton href="https://www.linkedin.com/in/minhnguyen161/" target="_blank" color="inherit">
+        <IconButton href="https://www.linkedin.com/in/your-linkedin-username/" target="_blank" color="inherit">
           <LinkedInIcon />
         </IconButton>
-        <IconButton href="https://www.facebook.com/MoeMinhNguyen" target="_blank" color="inherit">
+        <IconButton href="https://www.facebook.com/MoeMinhNguyen/" target="_blank" color="inherit">
           <FacebookIcon />
         </IconButton>
         <IconButton href="https://www.instagram.com/just.minhmeo/" target="_blank" color="inherit">
-        <InstagramIcon />
+          <InstagramIcon />
         </IconButton>
       </Box>
       <Grid container spacing={2} justifyContent="flex-start">
         <Grid item xs={12} sm={6} md={4}>
           <Box className="photo-box">
-            <img alt="Photo 1" src={Photo1} className="photo" />
+            <img alt="At a basketball game" src={Photo1} className="photo" />
           </Box>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
           <Box className="photo-box">
-            <img alt="Photo 2" src={Photo2} className="photo" />
+            <img alt="Delicious food" src={Photo2} className="photo" />
           </Box>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
           <Box className="photo-box">
-            <img alt="Photo 3" src={Photo3} className="photo" />
+            <img alt="At a restaurant" src={Photo3} className="photo" />
           </Box>
         </Grid>
       </Grid>
