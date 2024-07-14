@@ -12,6 +12,7 @@ import './App.css'; // Import the CSS file for global styles
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(true);
+  const [currentPage, setCurrentPage] = useState("none");
 
   const theme = createTheme({
     palette: {
@@ -21,12 +22,24 @@ const App = () => {
       },
       text: {
         primary: darkMode ? '#ffffff' : '#000000'
-      }
+      },
+      secondary:  
+      {
+        main:       darkMode ? '#31D7E9' : '#000000'
+      },
+
     },
   });
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
+  };
+
+  const handlePageChange = (handle) => {
+    const value = handle.target.pathname.split('/').pop();
+    console.log(value, "OMG");
+
+    setCurrentPage(value);
   };
 
   return (
@@ -35,7 +48,7 @@ const App = () => {
       <div className={`outer-div ${darkMode ? 'dark' : 'light'}`}>
         <div className="inner-div">
           <Router>
-            <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
+            <Header  currentPage={currentPage} handlePageChange={handlePageChange} toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
             <div className="content-wrapper">
               <div className="content">
                 <Routes>

@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Typography, IconButton, Box, Grid } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+
 import './Home.css'; // Import the CSS file for animations and styles
 
 const Photo3 = "https://scontent-sea1-1.xx.fbcdn.net/v/t1.15752-9/449769253_825646466197319_2572762229084854814_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_ohc=EPbtZbRCDhAQ7kNvgFq7LMd&_nc_ht=scontent-sea1-1.xx&oh=03_Q7cD1QFI2SINn0l4jhd6xU-dglR7cfrFRSN0rXCEkh128M5E7g&oe=66BA8103";
@@ -69,6 +72,12 @@ const Home = () => {
         </IconButton>
         <IconButton href="https://www.linkedin.com/in/minhnguyen161/" target="_blank" color="inherit">
           <LinkedInIcon />
+        </IconButton>
+        <IconButton href="https://www.facebook.com/MoeMinhNguyen" target="_blank" color="inherit">
+          <FacebookIcon />
+        </IconButton>
+        <IconButton href="https://www.instagram.com/just.minhmeo/" target="_blank" color="inherit">
+        <InstagramIcon />
         </IconButton>
       </Box>
       <Grid container spacing={2} justifyContent="flex-start">
