@@ -2,7 +2,9 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
+import { FaBook } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
+import { AiOutlineCodeSandbox } from "react-icons/ai"
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
@@ -32,30 +34,61 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Full Stack Developer Bootcamp",
+    url_link: "https://www.coderschool.vn/en",
+    location: "Ho Chi Minh City, VN",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "Due to Covid, I took a gap year off my studies, and took a full stack developer bootcamp. I then gain expertise in full stack development and landed an internship",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "August 2020 - December 2020",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Apprentice, Intern Full Stack Developer",
+    url_link: "https://www.everfit.io/",
+    location: "San Francisco, CA, USA",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
-  },
-  {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "Built Everfit's content management system (CMS) and developed API endpoints for the Task Reminder feature using Node.js, JWT, and React. Managed and integrated backend APIs with CI/CD pipelines to ensure system uptime",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "December 2020 - May 2021",
+  },
+  {
+    title: "Researcher",
+    url_link: "https://denison.edu/career/research/summer-scholars-awards",
+    location: "Granville, OH, USA",
+    description:
+      "Awarded the Anderson Science Scholars grant to research and implement the Nonlinear Indistinguishability Query algorithm under the mentorship of Dr. Ashwin Lall",
+    icon: React.createElement(FaBook),
+    date: "May 2022 - August 2022",
+  },
+  {
+    title: "Apprentice, Intern Lead Backend Engineer",
+    url_link: "https://www.everfit.io/",
+    location: "San Francisco, CA, USA",
+    description:
+      "Led a team of 3 interns to support backend and frontend infrastructure for three products using Agile methodology. Reduced employee leave processing time by 50% through the development of REST APIs with Node.js and MongoDB NoSQL",
+    icon: React.createElement(AiOutlineCodeSandbox),
+    date: "May 2023 - December 2023",
+  },
+  {
+    title: "University Graduate",
+    url_link: "https://denison.edu/",
+    location: "Denison University, OH, USA",
+    description:
+      "I graduated with a B.A in Computer Science",
+    icon: React.createElement(LuGraduationCap),
+    date: "August 2019 - May 2024",
+  },
+  {
+    title: "Volunteer, Web Developer",
+    url_link: "https://www.everfit.io/",
+    location: "San Francisco, CA, USA",
+    description:
+      "Currently volunteering as a web developer, addressing customer experience bugs with a specialization in resolving data corruption issues, and proficient in building product features",
+    icon: React.createElement(CgWorkAlt),
+    date: "July 2024 - Present",
   },
 ] as const;
+
 
 export const projectsData = [
   {
@@ -68,14 +101,14 @@ export const projectsData = [
   {
     title: "Decryption/Encryption Page",
     description:
-      "Built a React site inspired by class API projects with Python for NSA's AES symmetric encryption, using a frontend for text/file encryption.",
+      "Built a React site inspired by class API projects with Python for NSA's AES symmetric encryption, using a frontend for text/file encryption",
     tags: ["React", "Redux",, "REST","Python"],
     imageUrl: rmtdevImg,
   },
   {
     title: "Practice Basketball - E-Commerce Website",
     description:
-      "I made a e-commerce website for a local basketball coach to sell his merchandise/programs.",
+      "I made a e-commerce website for a local basketball coach to sell his merchandise/programs",
     tags: ["React", "Node.js", "Axios", "MongoDB"],
     imageUrl: wordanalyticsImg,
   },

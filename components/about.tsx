@@ -4,7 +4,6 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
-import { useInView } from "react-intersection-observer";
 
 export default function About() {
   const { ref } = useSectionInView("About");
@@ -39,7 +38,7 @@ export default function About() {
       </p>
       <p>
         <span className="italic">{"When I'm not coding"}</span>, I enjoy playing 🎮 video games, watching 🎥 movies, and playing with my 🐕 dog. I also enjoy{" "}
-        <span className="font-medium underline">History</span>  📚. I can go on for hours if it is something that I relate 
+        <span className="font-medium underline">History</span>  📚. I can go on for hours if it is something that I relate to.
       </p>
 
     </motion.section>
