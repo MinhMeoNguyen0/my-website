@@ -247,7 +247,8 @@ function flyTo(pose, dur = 1.25) {
   rig.from = { pos: rig.pos.clone(), target: rig.target.clone(), shift: rig.shift.clone() };
   rig.to = pose;
   rig.t0 = now;
-  rig.dur = reducedMotion ? 0.001 : dur;
+  // reduced motion keeps a (shorter, calmer) move so a tap never just pops
+  rig.dur = reducedMotion ? Math.min(dur, 0.8) : dur;
 }
 
 const tmpV = new THREE.Vector3();
