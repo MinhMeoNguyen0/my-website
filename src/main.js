@@ -5,6 +5,7 @@ import "./style.css";
 
 import * as THREE from "three";
 import { injectSpeedInsights } from "@vercel/speed-insights";
+import { inject as injectAnalytics } from "@vercel/analytics";
 import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
 import { ShaderPass } from "three/addons/postprocessing/ShaderPass.js";
@@ -590,6 +591,7 @@ addEventListener("resize", () => {
 });
 
 injectSpeedInsights();
+injectAnalytics();
 
 boot().catch((err) => {
   console.error(err);
