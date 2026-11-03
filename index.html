@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Minh Nguyen — Desk</title>
+    <meta name="description" content="Minh Nguyen, full-stack software engineer. An interactive 3D desk portfolio: click the objects to see projects and experience." />
+    <meta name="theme-color" content="#0b0b0c" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='4' width='26' height='19' rx='2' fill='%23d9cfb3'/%3E%3Crect x='6' y='7' width='20' height='13' fill='%2307120b'/%3E%3Crect x='8' y='9' width='8' height='2' fill='%238dffa8'/%3E%3Crect x='9' y='25' width='14' height='4' fill='%23b9ae90'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <canvas id="scene" aria-label="A 3D office desk. Each object on the desk opens a section of the portfolio."></canvas>
+
+    <header id="brand">
+      <h1>MINH NGUYEN</h1>
+      <p>software engineer · full stack</p>
+    </header>
+
+    <div id="hotspots" aria-hidden="true"></div>
+
+    <div id="tooltip" role="tooltip">
+      <b class="tt-title"></b>
+      <span class="tt-hint"></span>
+      <em class="tt-action">click to open</em>
+    </div>
+
+    <div id="toast">Hover over the desk · click any object for a closer look</div>
+
+    <nav id="nav" aria-label="Sections">
+      <button id="nav-prev" aria-label="Previous object">‹</button>
+      <button id="nav-label" aria-haspopup="true" aria-expanded="false">
+        <span class="nav-current">Look around the desk</span>
+        <span class="nav-caret">▴</span>
+      </button>
+      <button id="nav-next" aria-label="Next object">›</button>
+      <button id="nav-home" aria-label="Back to the whole desk" hidden>⌂</button>
+      <ul id="nav-menu" hidden></ul>
+    </nav>
+
+    <aside id="panel" aria-hidden="true" aria-labelledby="panel-title">
+      <div class="win">
+        <div class="titlebar">
+          <span class="dots"><i></i><i></i><i></i></span>
+          <span class="path"></span>
+          <button class="close" aria-label="Close">✕</button>
+        </div>
+        <div class="body" tabindex="-1">
+          <p class="kicker"></p>
+          <h2 id="panel-title"></h2>
+          <div class="content"></div>
+        </div>
+        <div class="foot">
+          <button class="prev">‹ <span></span></button>
+          <button class="next"><span></span> ›</button>
+        </div>
+      </div>
+    </aside>
+
+    <div id="loader" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Loading the desk">
+      <div class="bios">
+        <div class="bios-head">
+          <span>MEO-BIOS (C) 1996 · v1.61</span>
+          <span class="energy">◆ ENERGY STAR</span>
+        </div>
+        <pre id="boot-log"></pre>
+        <div class="bar"><div class="fill"></div></div>
+        <div class="pct"><span id="pct">0</span>%</div>
+      </div>
+    </div>
+
+    <noscript>
+      <div class="noscript">
+        <h1>Minh Nguyen — Software Engineer</h1>
+        <p>This portfolio is a 3D desk and needs JavaScript. Reach me at dminhnguyen161@gmail.com or github.com/MinhMeoNguyen0.</p>
+      </div>
+    </noscript>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

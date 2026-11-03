@@ -1,34 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Minh Nguyen — Desk Portfolio
 
-## Getting Started
+An interactive 3D office desk built with three.js. Every object on the desk is a section of the portfolio. Hover an object to see a preview box; click it to fly the camera in and open its panel.
 
-First, run the development server:
+| Object | Section |
+| --- | --- |
+| Photo frame | About me |
+| Walmart mug | Walmart Global Tech |
+| Dumbbell | Everfit.io |
+| CRT computer | Projects (the screen switches to a project listing) |
+| Keyboard | Skills |
+| Books + grad cap | Education |
+| Cactus | Off the clock |
+| Paper + pencil | Résumé (PDF) |
+| Phone | Contact |
+| Desk lamp | Toggles the light |
+
+Navigation: click objects or the hotspot dots, use the ‹ › buttons or arrow keys, open the section menu from the bottom bar, and press Esc (or click empty space) to return to the whole desk. On phones the panel becomes a bottom sheet.
+
+The VHS look is a port of the CC0 "Fears to Fathom Shader" by theCube (godotshaders.com), run as the last post-processing pass (`src/fearsShader.js`).
+
+## Run
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```bash
+npm run build
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The production site lands in `dist/` and can be deployed as static files (Vercel, Netlify, GitHub Pages).
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Where things live
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- `src/content.js` — all text: sections, links, nav order
+- `src/world.js` — the room, lights and every desk object
+- `src/textures.js` — canvas-drawn textures (mug print, CRT terminal, clock, corkboard, book spines)
+- `src/fearsShader.js` — the post-processing shader
+- `src/main.js` — renderer, loader, camera moves, hover/click, panel and nav
+- `public/` — portrait photo and résumé PDF
