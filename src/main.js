@@ -4,6 +4,7 @@ import "@fontsource/ibm-plex-mono/600.css";
 import "./style.css";
 
 import * as THREE from "three";
+import { injectSpeedInsights } from "@vercel/speed-insights";
 import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
 import { ShaderPass } from "three/addons/postprocessing/ShaderPass.js";
@@ -587,6 +588,8 @@ addEventListener("resize", () => {
     flyTo(pose, 0.35);
   });
 });
+
+injectSpeedInsights();
 
 boot().catch((err) => {
   console.error(err);
